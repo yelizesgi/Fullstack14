@@ -1,0 +1,36 @@
+/* Universal selector */
+/* Tüm elementleri secer */
+* {
+  /* Tüm elementlerin boşluklarını sıfırladık */
+  margin: 0px;
+  /* Tüm elementlerin iç boşluklarını sıfırladık */
+  padding: 0px;
+  /* box-sizing: border-box; */
+
+  /* ?Hexadecimal renkler */
+  color: darkgreen;
+  color: #123456;
+  color: #bebe;
+  color: #ece;
+  color: #333;
+  color: #eee;
+  color: #000;
+}
+
+.images {
+  width: 400px;
+
+  /* !Border */
+  border-color: #ece;
+  border-width: 6px;
+  border-style: solid;
+  border-style: inset;
+
+  /*? Shorthand */
+  border: 7px inset #bebe;
+}
+
+/* img{ 
+  width: 100px;
+}*/
+/*!class etiketlere göre daha özel bir secici oldugu icin digerini ezer */
