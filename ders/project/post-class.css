@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgba(186, 240, 186, 0.938);
+}
+h1 {
+  color: rgb(44, 38, 38);
+  background-color: rgb(7, 119, 7);
+  margin-bottom: 5px;
+  border: 8px solid rgb(70, 65, 65);
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+}

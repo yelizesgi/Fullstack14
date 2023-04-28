@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post-Class</title>
+    <link rel="stylesheet" href="post-class.css" />
+  </head>
+  <body>
+    <h1>Kayıt Formu</h1>
+    <form action="post-result.html" method="get">
+      <section id="name">
+        <div class="name">
+          <label for="isim">İsim</label><br />
+          <input
+            type="text"
+            id="isim"
+            placeholder="Adininiz giriniz"
+            name="isim"
+            value=""
+            required
+          />
+          <br /><br />
+        </div>
+        <!-- Email -->
+        <div class="email">
+          <label for="email">Email</label> <br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email giriniz"
+            required
+          />
+          <br /><br />
+        </div>
+        <!-- Password -->
+        <div class="password">
+          <label for="pass">Password</label><br />
+          <input
+            type="password"
+            id="pass"
+            name="pass"
+            placeholder="En az 8 karakter giriniz"
+            required
+          />
+          <br /><br />
+        </div>
+        <!-- Age -->
+        <div class="age">
+          <label for="age">Age</label><br />
+          <input
+            type="number"
+            id="age"
+            name="age"
+            min="0"
+            max="160"
+            placeholder="Yasinizi giriniz"
+          />
+        </div>
+        <!-- Gender -->
+        <div class="gender">
+          <p>GENDER</p>
+          <label for="erkek">Erkek</label>
+          <input type="radio" id="erkek" name="gender" value="Erkek" />
+          <label for="kadın">Kadın</label>
+          <input type="radio" id="kadın" name="gender" value="Kadın" />
+
+          <label for="none">None</label>
+          <input type="radio" id="none" name="gender" value="None" checked />
+        </div>
+        <!-- Dogum Tarihi -->
+        <div class="dob">
+          <label for="dob">Dogum Tarihi</label>
+          <input type="date" name="dob" id="dob" min="1980-01-01" />
+          <br /><br />
+        </div>
+        <!-- Egitimler -->
+        <div class="egitim">
+          <label for="egitim">LUTFEN ALMAK İSTEDİĞİNİZ EGİTİMLERİ SECİNİZ</label
+          ><br />
+          <input type="checkbox" name="egitim1" id="bdt" value="BDT" />
+          <label for="bdt">Bilissel Davranıscı Terapi</label><br />
+          <input type="checkbox" name="egitim2" id="kcot" value="KCOT" />
+          <label for="kcot">Kısa Sureli Cozum Odaklı Terapi</label><br />
+          <input type="checkbox" name="egitim3" id="ot" value="OT" />
+          <label for="ot">Oyun Terapisi</label><br />
+          <input type="checkbox" name="egitim4" id="mt" value="MT" />
+          <label for="bdt">Masal Terapisi</label><br /><br />
+        </div>
+      </section>
+      <section class="gun">
+        <label for="gun">LUTFEN EGİTİM ALMAK İSTEDİGİNİZ GRUBU SECİNİZ</label
+        ><br />
+        <select name="gun" id="gun">
+          <optgroup label="Haftaıcı">
+            <option value="gunduz">Gunduz</option>
+            <option value="aksam">Aksam</option>
+          </optgroup>
+
+          <optgroup label="Haftasonu">
+            <option value="gunduz">Gunduz</option>
+            <option value="aksam">Aksam</option>
+          </optgroup>
+        </select>
+      </section>
+      <br />
+      <!-- Not -->
+      <section class="not">
+        <label for="not">Notunuzu giriniz:</label><br /><br />
+        <textarea
+          name="not"
+          id="not"
+          cols="40"
+          rows="10"
+          style="resize: none"
+          maxlength="100"
+          placeholder="En fazla 100 karakter girilebilir"
+        >
+        </textarea>
+      </section>
+      <!-- Buttons -->
+      <section id="buttons">
+        <input type="submit" value="Kaydet" />
+        <input type="reset" value="Sil" />
+      </section>
+    </form>
+  </body>
+</html>
