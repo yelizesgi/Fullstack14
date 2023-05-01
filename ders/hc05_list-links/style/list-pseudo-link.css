@@ -1,0 +1,160 @@
+/*? Madde imi stilleri  */
+
+/*? class ı languages olan elementi sec  */
+ul .langusges {
+  font-family: "Bruno Ace SC", cursive;
+
+  list-style-type: circle;
+  list-style-type: square;
+  list-style-type: none;
+  list-style-type: lower-latin;
+  list-style-type: georgian;
+
+  /*? Madde iminin yeri li'lerin içerisinde mi yoksa dışında mı olacak */
+  list-style-position: outside;
+
+  /*!Madde imlerinin soldaki boşluğunu ayarlamak için kullandık  */
+  padding: 20;
+
+  list-style-image: url("../image/check-solid.svg");
+}
+h2 i {
+  font-size: 40px;
+}
+.fa-solid {
+  /* İkonların rengini red yap */
+  color: red;
+}
+h2 {
+  color: blueviolet;
+  /* Bu h2 içerisindeki i leri ezemez o yüzden değişmez renk */
+}
+
+/*!PSEUDO CLASSES  */
+
+/** Bunu kullanacaksak aşağıdaki odd veya even ın birini vermek yeterli  */
+ul.pseudo li {
+  background-color: darkgray;
+}
+ul .pseudo li:first-child {
+  color: blue;
+  font-weight: 700;
+}
+
+ul .pseudo li:lastt-child {
+  color: green;
+  font-weight: 700;
+}
+
+ul .pseudo li:nth-child(5) {
+  color: purple;
+  font-weight: 700;
+}
+
+ul .pseudo li:nth-child(odd) {
+  color: hotpink;
+  font-weight: 700;
+  background-color: lightgray;
+}
+
+/* ul .pseudo li:nth-child(even) {
+  color: lightsalmon;
+  font-weight: 700;
+  background-color: darkgray;
+} */
+/*?Tek degilse */
+/* ul.pseudo li:not(odd) {
+  background-color: green;
+} */
+
+/* Fare ile li lerin üzerine gelindiğinde işleyecek kod */
+ul .pseudo li:hover {
+  opacity: 0.5;
+  background-color: black;
+  cursor: pointer;
+  /* display: inline-block; */
+}
+
+/* Fare ile bir li nin üzerine tıklanıldığında işleyecek kod */
+ul .pseudo li:active {
+  background-color: green;
+}
+
+/*? input aktif hale geldiğinde calısır  */
+input:focus {
+  background-color: tomato;
+  color: white;
+  /* border: 4px dotted white; */
+  outline: none;
+}
+
+/*! LINK PSEUDO CLASSES  */
+
+/*? linklerle ilgili kısa kod yazımı  */
+/* nav.links a{
+    color: crimson;
+    text-decoration: none;
+}
+
+nav.links a:hover{
+    color: purple;
+    text-decoration: underline;
+} */
+
+/** Ziyaret edilmemiş linkler  */
+nav.links a:link {
+  color: brown;
+}
+
+/** Ziyaret edilmiş link  */
+nav.links a:visited {
+  color: lightpink;
+}
+
+/** Tıklanıldığında calışan kod  */
+nav.links a:active {
+  color: magenta;
+}
+
+/** Fare ile linklerin üzerine gelindiğinde calışan kod  */
+nav.links a:hover {
+  color: chartreuse;
+  text-decoration: none;
+}
+
+/*? class'i x olan p elementinin icerinde .y class'inin içindeki z id'li elementi sec  */
+/* p.x .y #z {
+}
+<p class="x">
+<div class="y">
+  <div id="z"></div>
+</div>
+</p> */
+
+/*! PSEUDO ELEMENTS  */
+.p-elements::first-line {
+  color: red;
+}
+
+.p-elements::first-letter {
+  font-size: 30px;
+}
+
+ul.before-after li::before {
+  content: "🎶";
+}
+
+ul.before-after li:nth-child(3):before {
+  content: "🚘";
+}
+
+ul.before-after li:last-child::after {
+  content: "🏎️";
+}
+
+ul.before-after ul.before-after li:nth-child(2)::after {
+  content: " Nice Car";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 600;
+  content: "\f53a";
+}
