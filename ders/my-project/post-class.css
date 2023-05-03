@@ -16,3 +16,20 @@ h1 {
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
 }
+
+section {
+  text-align: center;
+}
+
+label {
+  font-weight: bolder;
+}
+
+div input {
+  background-color: black;
+  border: 1px solid rgb(80, 85, 80);
+  width: 400px;
+  margin: 2px;
+  text-align: center;
+  outline-color: rgb(12, 94, 73);
+}
