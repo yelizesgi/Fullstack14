@@ -1,0 +1,88 @@
+html {
+  /* height: 1000px; */
+  /* height: 100%; */
+  /* ? ROOT */
+  /** html in default font size ' ı 16px */
+  font-size: 30px;
+}
+
+body {
+  /*! Body nin default yüksekliği yok bu nedenle chid lardan birisine 50% yükseklikler verilirse calısmaz */
+  background-color: #bebe;
+  /* height: 100%; */
+  height: 100vh;
+}
+
+h1 {
+  color: red;
+  /*!Default 32px*/
+  font-size: 30px;
+}
+
+/*! ------MUTLAK OLCU BIRIMLERI------*/
+p.abs {
+  /*! Default 16px ?*/
+  font-size: 20px;
+  font-size: 1cm;
+  font-size: 10mm;
+  font-size: 1in;
+  font-size: 50px;
+}
+
+/*?  % biriminde bir html elemaninin font size'i parent'in font-size'ina gore oranlanir. */
+p.percent {
+  font-size: 200%; /*? 16px * 2  = 32px  */
+  font-size: 50%; /*? 16px / 2  = 8px  */
+}
+
+.div1 {
+  background-color: tomato;
+  width: 50%;
+}
+
+.div2 {
+  background-color: green;
+  width: 50%;
+}
+
+.div3 {
+  background-color: hotpink;
+  width: 50vw;
+  /* % parent a bağlı, vw ekrana bağlı bir ölçü birimi, ekrana bağlı değişimlerde vw kullanılmalı */
+  height: 50vh;
+  /* Ekrana bağlı yükseklik ölçü birimi vh dir. Ekran büyüdüğü ölçüde o birimde büyür */
+}
+
+/*!  EM olcu biriminde bir html elemaninin font size'i parent'in font-size'ina gore oranlanir. */
+.div4 {
+  background-color: indigo;
+  color: white;
+  /*? Parent' ın (body) 1 katına esittir(16px)  */
+  font-size: 2em;
+  width: 150px;
+}
+
+.div5 {
+  background-color: lightblue;
+  color: white;
+  font-size: 2em;
+  /* width: 1.5em; */
+}
+.div6 {
+  background-color: yellowgreen;
+  color: white;
+  /* font-size: 0.5em; */
+  font-size: 3em;
+}
+
+.div7 {
+  font-size: 1rem;
+}
+
+div8 {
+  font-size: 2rem;
+}
+
+div7 {
+  font-size: 3rem;
+}
