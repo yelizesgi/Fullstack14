@@ -135,11 +135,122 @@ console.log(15 !== "15");
 // //. .charCodeAt() metodu string karakterin ASCII karşılığını verir.
 // console.log("a" > "A");// true
 
-//? >=, <= (Büyük veya eşit mi?, Küçük veya eşit mi?)
+// //? >=, <= (Büyük veya eşit mi?, Küçük veya eşit mi?)
 
-console.log(15 >= 15); //true
-console.log(15 <= 15); // true
-console.log(15 >= 16); // false
-// console.log(15 >== 16);// error verir. Çünkü bu şekilde karşılaştırma operatörü bulunmuyor.
-console.log(15 >= "15"); // true
-console.log("14" <= "15"); // true
+// console.log(15 >= 15); //true
+// console.log(15 <= 15); // true
+// console.log(15 >= 16); // false
+// // console.log(15 >== 16);// error verir. Çünkü bu şekilde karşılaştırma operatörü bulunmuyor.
+// console.log(15 >= "15"); // true
+// console.log("14" <= "15"); // true
+
+// //! 🔥🔥🔥              Mantıksal Operatörler
+
+// // && and
+// console.log(true && true); // true
+// console.log(" " && true); // true
+
+// console.log(5 && "Merhaba"); // "Merhaba"
+// console.log(0 && "Dünya"); // 0
+// // && operatoru ilk gördüğü falsy veya false değerini döner.
+// console.log(5 && 0); // 0
+// console.log(true && false); // false
+
+// //! || or
+// console.log(true || false); //true
+// console.log(5 || 15); // 5
+// console.log(5 || 0); // 5
+// console.log("" || "Merhaba"); // "Merhaba"
+// console.log("" || 0); // 0
+// // || operatoru true ve truthy değer arar. ilk gördüğü true veya truthy döner.Bulamazsa son gördüğü false veya falsy değeri döner.
+
+// // ! not
+// console.log(!true); // false
+// console.log(!false); // true
+// console.log(!0); // true
+// console.log(!5); // false
+
+// // falsy
+// console.log(Boolean(false)); // false
+// console.log(Boolean(0)); // false
+// console.log(Boolean(-0)); // false
+// console.log(Boolean(0n)); // false
+// console.log(Boolean("")); // false (boş string)
+// console.log(Boolean(null)); // false
+// console.log(Boolean(undefined)); // false
+// console.log(Boolean(NaN)); // false
+
+// // truthy
+// console.log(Boolean(true)); // true
+// console.log(Boolean({})); // true (boş object)
+// console.log(Boolean([])); // true (boş array)
+// console.log(Boolean(5)); // true
+// console.log(Boolean("0")); // true (dolu string)
+// console.log(Boolean("false")); // true (dolu string)
+// console.log(Boolean(Infinity)); // true
+// console.log(Boolean(new Date())); // true (tarih methodları)
+// console.log(Boolean(function () {})); // true (boş fonksiyon)
+// console.log(
+//   Boolean(function () {
+//     console.log("Hello World!");
+//   })
+// ); // true (boş fonksiyon)
+
+// //! İşlem Önceliği sıralaması
+// // 1. ! (not)
+// // 2. && (and)
+// // 3. || (or)
+// const karşilaştırma = ("merhaba" && "dünya") || false || (28 && 67 && !0);
+// console.log(karşilaştırma); // dünya
+
+// //* kullanıcıdan vize ve final notunu prompt olarak alın. sabit bir canEgrisi(ortalama) belirleyiniz.
+// //!Kullanıcının vize ve final ortalaması canEgrisine eşit veya büyükse Kullanıcıya "Geçtiniz" mesajı dönünüz. Eşit veya büyük değilse "Kaldınız" şeklinde mesaj dönününüz.
+// //! Not: prompt tan gelen veriler string olarak geliyor o nedenle dönüştürme işlemi yapıyoruz.
+// let vize = Number(prompt("Lütfen vize notunuzu giriniz ?"));
+// let final = Number(prompt("Lütfen final notunuzu giriniz ?"));
+// let canEgrisi = 65;
+// let sonuc =
+//   (Math.round((vize + final) / 2) >= canEgrisi && "Geçtiniz!") || "Kaldınız!";
+// console.log(sonuc);
+
+// * =============================================
+// *            TIP DONUSUMLERI
+// * =============================================
+
+let sayi = +prompt("Bir sayi girinz:"); //? 100
+console.log(typeof sayi);
+let sayi2 = 10;
+sayi = sayi + sayi2; //? concatination
+
+console.log(++sayi);
+
+console.log(Number("123")); //? 123
+console.log(Number("12.3")); //? 12.3
+console.log(Number("0")); //? 0
+console.log(Number(" ")); //? 0
+console.log(Number("")); //? 0
+console.log(Number(null)); //? 0
+
+const myNumber = "threezeroone"; //? string
+let myNumber2 = Number(myNumber);
+console.log(myNumber2); //? NaN
+console.log(typeof myNumber2); //? number
+
+const dolar = "1000";
+const tl = "2000";
+
+const totalMoney = Number(dolar) + +tl; //kısa yolla Number() + ile de yapılır fakat en iyi kullanımı ilki
+console.log(totalMoney);
+
+//* ALternatif olarak parseInt() ve parseFloat() da kullanilabilir.
+const dolarInt = parseInt(dolar); //? tamsayiya cevirir
+console.log(dolarInt);
+const tlFloat = parseFloat(tl); //? virgüllü sayiya çevirir
+console.log(tlFloat);
+
+console.log(parseFloat(null)); //? NaN
+console.log(parseFloat("")); //? NaN
+
+//? String
+const myNumber3 = 2000.5;
+console.log(String(myNumber3));
