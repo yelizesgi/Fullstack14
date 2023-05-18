@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Smokum&family=Ysabeau:wght@100;200;300;500&display=swap");
+@import "theme.css";
+:root {
+  /*! Colors */
+  --white: #ffd;
+  --black: hsl(238, 94%, 6%);
+  --green: hsl(180, 83%, 24%);
+  --green-light: hsl(180, 83%, 40%);
+  --olive: hsl(72, 22%, 67%);
+  --yellow-dark: hsl(39, 84%, 53%);
+  --orange-dark: hsl(15, 98%, 30%);
+  --orange-vivid: hsl(15, 98%, 50%);
+  --orange-light: hsl(15, 90%, 65%);
+
+  /*! Font-Families  */
+  --ff-roboto: "Roboto", sans-serif;
+  --ff-smokum: "Smokum", cursi
+
+
+  /*! Font-Sizes  */
+  --fs-3xl: 3rem;
+  --fs-2xl: 2rem;
+  --fs-xl: 1.8rem;
+  --fs-lg: 1.4rem;
+  --fs-md: 1rem;
+  --fs-xs: 0.6rem;
+  --fs-sm: 0.9rem;
+}
+
+h1 {
+  color: var(--orange-dark);
+  font-family: var(--ff-roboto);
+}
+
+p {
+  font-family: var(--ff-smokum);
+}
+
+button {
+  width: 100px;
+  padding: 1rem;
+  background-color: var(--green);
+}
+
+button:hover {
+  background-color: var(--green-light);
+}
