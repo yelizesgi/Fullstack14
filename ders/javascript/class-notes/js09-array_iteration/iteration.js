@@ -42,7 +42,7 @@ let names = ["Mustafa", "Murat", "Ahmet", "Mustafa", "Ayşe", "canan"]
 
 const upperName = names.map((name) => name.toLocaleUpperCase())
 console.log(upperName)
-console.log(names)
+console.log(names) //? map methodu normalde ana diziyi değiştirmez aşağıda ana dizi modifiye edildiği için burada değişmiş gözüküyor
 
 //! Orjinal dizi yi modifiye etmek için 3. parametre kullanilabilir.
 names.map((name, i, arr) => {
