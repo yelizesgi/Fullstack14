@@ -65,3 +65,5 @@ console.log(css.innerText) //? CSS
 
 const django = js.nextElementSibling.nextElementSibling
 console.log(django.innerHTML) //? Django
+
+

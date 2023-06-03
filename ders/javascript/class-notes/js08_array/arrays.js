@@ -17,7 +17,7 @@
 // console.log(colors[-1]) //undefined
 // console.log(colors[56]) //undefined
 
-//Array is Array
+//!Array is Array
 // const colors = ['Red','Green','Blue'];
 // console.log(typeof colors);
 
@@ -28,7 +28,7 @@
 // console.log(Array.isArray(variables)) //false
 // console.log(variables instanceof Array) //false
 
-//Strings immutable değiştirilemez
+//?Strings immutable değiştirilemez
 // let str = 'Brown';
 // console.log(str[0])
 // str[0]='b';
@@ -36,7 +36,7 @@
 
 // str = 'brown'
 
-//Arrayle mutable yani değiştirilebilir
+//!Arrayle mutable yani değiştirilebilir
 // const colors = ['Red','Green','Blue'];
 
 // colors[1] = 'yellow' //mevcudu değiştirir
@@ -65,7 +65,7 @@
 
 // console.log(colors)
 
-//primitiveler
+//!primitiveler
 /* let a = 5;
 let b = a;
 console.log(a)
@@ -77,7 +77,7 @@ console.log(b)
 b=a
 console.log(b) */
 
-//non-primitiveler
+//!non-primitiveler
 
 /* let arr1 = [1,2,'Three',false];
 
