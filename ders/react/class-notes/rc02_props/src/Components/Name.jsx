@@ -1,8 +1,8 @@
 
-const Name = () => {
+const Name = ({name}) => {
   return (
     <div>
-        <p>Hello Ahmet</p>
+        <p>Hello {name}</p>
     </div>
   )
 }

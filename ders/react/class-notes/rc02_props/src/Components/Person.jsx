@@ -1,14 +1,22 @@
 import Name from "./Name"
-const Person = () => {
+const Person = ({name, img, tel}) => {
+  //?Destruc. 
+//  const {name, img, tel}= props
   return (
     <div>
         {/* <Name/> */}
-        <p>Hello Ahmet</p>
-        <img src="https://cdn.pixabay.com/photo/2017/01/11/07/02/potra-1970989_640.jpg" alt="Ahmet" />
-
-        <p>Tel:05555555555</p>
+        <Name name= {name} />
+        <img src={img} alt="person-img" />
+        <p>Tel:{tel}</p>
     </div>
   )
 }
+//  <div>
+//       <Name name={props.name} />
+//       <img src={props.img} alt="cat-img" />
+//       <p>Tel:{props.tel}</p>
+//     </div>)
+
+
 
 export default Person
