@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* yapıştırdığımız @tailwind base; @tailwind components; @tailwind utilities; Kodları Tailwind içerisindeki base component ve utilities classlarını kullanabileceğimizi gösteriyor.*/
+
+@layer components{
+    .card{
+        @apply flex flex-col justify-between items-center bg-slate-500 rounded-xl w-3/12 h-[250px]
+    }
+}

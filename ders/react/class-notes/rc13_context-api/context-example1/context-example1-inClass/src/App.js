@@ -8,9 +8,11 @@ import PersonDetail from "./pages/PersonDetail";
 import Login from "./pages/Login";
 import { LoginContext } from "./context/LoginContext";
 import PrivateRouter from "./pages/PrivateRouter";
+import { useState } from "react";
 
 function App() {
-
+ const [user, setUser] = useState({email:"", password: ""})
+ console.log(user)
   
 
   return (
