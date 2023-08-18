@@ -7,7 +7,7 @@ import ProductModal from "../components/ProductModal"
 import ProductTable from "../components/Producttable"
 
 const Products = () => {
-  const { getStockData } = useStockCall()
+  const { getStockData, getProdCatBrands } = useStockCall()
   const { products } = useSelector((state) => state.stock)
 
   const [open, setOpen] = useState(false)
@@ -15,9 +15,12 @@ const Products = () => {
   const handleClose = () => setOpen(false)
 
   useEffect(() => {
-    getStockData("products")
-    getStockData("categories")
-    getStockData("brands")
+    // getStockData("products")
+    // getStockData("categories")
+    // getStockData("brands")
+
+    //! Promise.all ile es zamanli istek atilan fonks.
+    getProdCatBrands()
   }, [])
 
   return (
