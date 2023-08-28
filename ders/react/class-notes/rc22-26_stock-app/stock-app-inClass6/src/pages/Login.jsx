@@ -16,7 +16,7 @@ import useAuthCall from "../hooks/useAuthCall"
 const Login = () => {
   const { login } = useAuthCall()
 
-  //? harici validasyon şemasi
+  //? harici validasyon şemasi yup ile oluşturulmuş hazır yapı
   const loginSchema = object({
     email: string()
       .email("Lutfen valid bir email giriniz")
@@ -72,7 +72,7 @@ const Login = () => {
             initialValues={{ email: "", password: "" }}
             validationSchema={loginSchema}
             onSubmit={(values, action) => {
-              login(values)
+              login(values) // yukarda formik in içerisindeki hazır fonksiyonun içerisinde email ve password bilgisi olduğu için values kullandık parametre olarak email ve password ün verilmesi gerekiyor login fonksiyonunu services klasörünün içerisindeki authApiCall componenti içerisinde tanımlayıp çağırdık
               action.resetForm()
               action.setSubmitting(false)
             }}
@@ -86,8 +86,8 @@ const Login = () => {
                     id="email"
                     type="email"
                     variant="outlined"
-                    onChange={handleChange}
-                    onBlur={handleBlur}
+                    onChange={handleChange} // formikte hazır olarak var handleChange fonksiyonu
+                    onBlur={handleBlur} // formikte hazır olarak var handleBlur fonksiyonu
                     value={values.email}
                     error={touched.email && Boolean(errors.email)}
                     helperText={errors.email}
